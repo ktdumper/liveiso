@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Autologin as root without password
+sed -i -r -e "s|^autologin-user=.*\$|autologin-user=root|" /etc/lightdm/lightdm.conf
+sed -e '/pam_succeed_if.so/ s/^#*/#/' -i /etc/pam.d/lightdm-autologin
+passwd -d root
