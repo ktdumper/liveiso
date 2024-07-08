@@ -2,3 +2,7 @@ task-lxde-desktop
 firefox-esr
 network-manager-gnome
 gtk2-engines
+git
+python3-usb
+python3-tqdm
+python3-fusepy
