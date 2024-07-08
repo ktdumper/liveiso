@@ -1,2 +1,4 @@
 task-lxde-desktop
 firefox-esr
+network-manager-gnome
+gtk2-engines

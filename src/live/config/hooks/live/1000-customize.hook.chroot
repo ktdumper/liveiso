@@ -1,0 +1,7 @@
+#!/bin/sh
+
+set -e
+
+apt-get purge -y --no-install-recommends lxlock light-locker xterm
+apt-get autoremove -y
+rm /usr/share/applications/lxde-screenlock.desktop
