@@ -7,4 +7,6 @@ apt-get autoremove -y
 rm /usr/share/applications/lxde-screenlock.desktop
 
 cd /root/
+python3 -m pip install --break-system-packages *.whl
+rm *.whl
 git clone --recursive https://github.com/ktdumper/ktdumper.git

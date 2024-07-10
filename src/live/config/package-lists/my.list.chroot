@@ -3,6 +3,10 @@ firefox-esr
 network-manager-gnome
 gtk2-engines
 git
+libqtermwidget5-1
+python3-pip
 python3-usb
 python3-tqdm
 python3-fusepy
+python3-git
+gcc-arm-none-eabi
