@@ -11,14 +11,6 @@ ccache --set-config=max_size=50G
 
 cd /work
 
-apt-get source linux
-cd linux-*
-sed -i "s/CONFIG_DEBUG_INFO_DWARF_TOOLCHAIN_DEFAULT=y/CONFIG_DEBUG_INFO_NONE=y/g" debian/config/config
-patch -p1 < /work/disable-usb-checks-allow-high-wlength.patch
-fakeroot make -f debian/rules.gen setup_amd64_none_amd64
-fakeroot debian/rules source
-fakeroot make -f debian/rules.gen binary-arch_amd64_none_amd64
-
 apt-get source libusb-1.0
 cd libusb-1.0-*
 sed -i "s/#define MAX_CTRL_BUFFER_LENGTH.*4096/#define MAX_CTRL_BUFFER_LENGTH 73728/g" libusb/os/linux_usbfs.h
@@ -28,6 +20,7 @@ DEB_BUILD_OPTIONS=nocheck dpkg-buildpackage -b
 
 mkdir -p /work/live/config/packages.chroot
 cp ../*.deb /work/live/config/packages.chroot
+# cp /debtmp/*.deb /work/live/config/includes.chroot/root/
 
 wget https://github.com/tuna-f1sh/cyme/archive/8455975aed640c3a3bdeea86714e78d710e38c43.zip
 unzip 8455975aed640c3a3bdeea86714e78d710e38c43.zip

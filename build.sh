@@ -4,10 +4,8 @@ set -e
 
 mkdir -p output tmp
 
-output=$(realpath output)
-tmp=$(realpath tmp)
-
 docker build -t ktdumperliveiso:latest .
-docker run -it --privileged --rm -v $output:/output -v $tmp:/root/.cache/ccache ktdumperliveiso:latest bash /work/inner-build.sh
+docker run -it --privileged --rm -v $(realpath output):/output -v $(realpath tmp):/root/.cache/ccache -v $(realpath tmp):/debtmp ktdumperliveiso:latest bash /work/01-build-linux.sh
+docker run -it --privileged --rm -v $(realpath output):/output -v $(realpath tmp):/root/.cache/ccache -v $(realpath tmp):/debtmp ktdumperliveiso:latest bash /work/02-build.sh
 
 ls -lah output
