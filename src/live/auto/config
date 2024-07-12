@@ -5,4 +5,5 @@ lb config noauto \
      --architectures amd64 \
      --linux-flavours usbhack-amd64 \
      --apt-recommends false \
+     --archive-areas "main non-free-firmware" \
      "${@}"
