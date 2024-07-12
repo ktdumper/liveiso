@@ -3,6 +3,6 @@
 lb config noauto \
      --distribution bookworm \
      --architectures amd64 \
-     --linux-flavours amd64 \
+     --linux-flavours usbhack-amd64 \
      --apt-recommends false \
      "${@}"

@@ -11,6 +11,3 @@ cd /root/
 python3 -m pip install --break-system-packages *.whl
 rm *.whl
 git clone --recursive https://github.com/ktdumper/ktdumper.git
-
-# dpkg -i *.deb
-# rm *.deb

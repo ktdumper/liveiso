@@ -19,8 +19,7 @@ sed -i 's|LIBUSB_RC, "http://libusb.info"|LIBUSB_RC, "http://libusb.info; MAX_CT
 DEB_BUILD_OPTIONS=nocheck dpkg-buildpackage -b
 
 mkdir -p /work/live/config/packages.chroot
-cp ../*.deb /work/live/config/packages.chroot
-# cp /debtmp/*.deb /work/live/config/includes.chroot/root/
+cp ../*.deb /debtmp/linux-image*.deb /work/live/config/packages.chroot
 
 wget https://github.com/tuna-f1sh/cyme/archive/8455975aed640c3a3bdeea86714e78d710e38c43.zip
 unzip 8455975aed640c3a3bdeea86714e78d710e38c43.zip
