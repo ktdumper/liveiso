@@ -1,6 +1,8 @@
 task-lxde-desktop
 firefox-esr
 network-manager-gnome
+wpasupplicant
+wireless-regdb
 gtk2-engines
 git
 libqtermwidget5-1
