@@ -1,0 +1,4 @@
+[Desktop Entry]
+Name=ktdumper GUI
+Exec=bash -c 'cd /root/ktdumper; python3 ktdumper/gui.py'
+Type=Application
