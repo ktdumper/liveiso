@@ -2,12 +2,7 @@
 
 set -e
 
-update-ccache-symlinks
-export PATH="/usr/lib/ccache/:$PATH"
-export MAKEFLAGS="-j$(($(nproc)*2))"
 . "$HOME/.cargo/env"
-
-ccache --set-config=max_size=50G
 
 cd /work
 
