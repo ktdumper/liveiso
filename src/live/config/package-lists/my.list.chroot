@@ -12,6 +12,7 @@ python3-tqdm
 python3-fusepy
 python3-git
 gcc-arm-none-eabi
+libnewlib-dev
 build-essential
 featherpad
 p7zip-full
